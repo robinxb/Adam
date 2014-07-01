@@ -6,9 +6,22 @@
   "private": true,
   "devDependencies": {
     "grunt": "^0.4.5",
+	"grunt-contrib-clean": "*",
 	"grunt-contrib-cssmin": "*",
 	"grunt-contrib-sass": "*",
 	"grunt-contrib-uglify": "*",
-	"matchdep": "*"
-  }
+	"grunt-contrib-concat": "*",
+	"grunt-contrib-copy": "*",
+	"matchdep": "*",
+	"grunt-usemin": "*"
+  },
+  "repository":{
+	"type": "git",
+	"url":"git@github.com:robinxb/Adam.git"
+  },
+  "keywords": [
+	"ghost",
+	"blog",
+	"theme"
+  ]
 }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+	<!--build:css /assets/css/main.min.css-->
+    <link rel="stylesheet" type="text/css" href="css/screen.css" />
+	<link rel="stylesheet" type="text/css" href="css/fonts_def.css" />
+	<link rel="stylesheet" type="text/css" href="css/railscasts.min.css" />
+	<!--endbuild-->
+
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+
+    {{! Everything else gets inserted here }}
+    {{{body}}}
+
+    {{! Ghost outputs important scripts and data with this tag }}
+	{{ghost_foot}}
+	
+	<!--build:js /assets/js/script.js-->
+    <script type="text/javascript" src="js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/Adam.js"></script>
+	<script type="text/javascript" src="js/highlight.min.js"></script>
+	<!--endbuild-->
+	<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>
