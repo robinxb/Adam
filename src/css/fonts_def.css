@@ -5,29 +5,29 @@
   font-family: 'Noto Serif';
   font-style: normal;
   font-weight: 400;
-  src: local('Noto Serif'), local('NotoSerif'), url(./fonts/eCpfeMZI7q4jLksXVRWPQy3USBnSvpkopQaUR-2r7iU.ttf) format('truetype');
+  src: local('Noto Serif'), local('NotoSerif'), url(./../fonts/eCpfeMZI7q4jLksXVRWPQy3USBnSvpkopQaUR-2r7iU.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Noto Serif';
   font-style: normal;
   font-weight: 700;
-  src: local('Noto Serif Bold'), local('NotoSerif-Bold'), url(./fonts/lJAvZoKA5NttpPc9yc6lPfEr6Hm6RMS0v1dtXsGir4g.ttf) format('truetype');
+  src: local('Noto Serif Bold'), local('NotoSerif-Bold'), url(./../fonts/lJAvZoKA5NttpPc9yc6lPfEr6Hm6RMS0v1dtXsGir4g.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Noto Serif';
   font-style: italic;
   font-weight: 400;
-  src: local('Noto Serif Italic'), local('NotoSerif-Italic'), url(./fonts/HQXBIwLHsOJCNEQeX9kNz4nF5uFdDttMLvmWuJdhhgs.ttf) format('truetype');
+  src: local('Noto Serif Italic'), local('NotoSerif-Italic'), url(./../fonts/HQXBIwLHsOJCNEQeX9kNz4nF5uFdDttMLvmWuJdhhgs.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'), url(./fonts/cJZKeOuBrn4kERxqtaUH3aCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+  src: local('Open Sans'), local('OpenSans'), url(./../fonts/cJZKeOuBrn4kERxqtaUH3aCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 700;
-  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(./fonts/k3k702ZOKiLJc3WVjuplzInF5uFdDttMLvmWuJdhhgs.ttf) format('truetype');
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(./../fonts/k3k702ZOKiLJc3WVjuplzInF5uFdDttMLvmWuJdhhgs.ttf) format('truetype');
 }
