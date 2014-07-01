@@ -58,17 +58,17 @@ module.exports = function(grunt){
 						expand: true,
 						dot: true,
 						cwd: '<%= dir.src %>',
-						src: [ '*.{ico,png,md,hbs}', ],
+						src: [ '*.{ico,png,md,hbs}', 'partials/**/*'],
 						dest: '<%= dir.build %>'
-					},
-				  {
-					expand: true,
-					flatten: true,
-					cwd: '<%= dir.bower %>',
-					src: ['**/font*/*.{svg,eot*,ttf,woff,otf}'],
-					dest: '<%= dir.build %><%= dir.fonts %>/',
-					filter: 'isFile'
-				  }]
+				},
+				{
+						expand: true,
+						flatten: true,
+						cwd: '<%= dir.src %>',
+						src: ['**/font*/*.{svg,eot*,ttf,woff,otf}'],
+						dest: '<%= dir.build %><%= dir.fonts %>/',
+						filter: 'isFile'
+				}]
 			},
 			release: {
 				files:[{
@@ -149,8 +149,5 @@ module.exports = function(grunt){
     grunt.registerTask('cls', [
 			'clean:build',
 			'clean:release',
-	]);
-    grunt.registerTask('cls', [
-			'cssmin:report'
 	]);
 };

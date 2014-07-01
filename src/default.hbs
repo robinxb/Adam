@@ -10,6 +10,7 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
 
 	<!--build:css /assets/css/main.min.css-->
@@ -17,6 +18,13 @@
 	<link rel="stylesheet" type="text/css" href="css/fonts_def.css" />
 	<link rel="stylesheet" type="text/css" href="css/railscasts.min.css" />
 	<!--endbuild-->
+
+	<script type="text/javascript">
+		{{> custom/config}}
+
+		window.ADAM = {};
+		ADAM.haveGA = typeof ga_ua !== 'undefined' && ga_ua !== 'UA-XXXXX-X';
+	</script>
 
     {{ghost_head}}
 </head>
@@ -35,6 +43,20 @@
 	<script type="text/javascript" src="js/highlight.min.js"></script>
 	<!--endbuild-->
 	<script>hljs.initHighlightingOnLoad();</script>
+
+	{{! ga script}}
+	<script type="text/javascript">
+		if(ADAM.haveGA) {
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//' + ga_url,'ga');
+
+			ga('create', ga_ua, 'auto');
+			ga('send', 'pageview');
+		}
+	</script>
+
 
 </body>
 </html>
