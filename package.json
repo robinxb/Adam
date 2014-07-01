@@ -12,8 +12,12 @@
 	"grunt-contrib-uglify": "*",
 	"grunt-contrib-concat": "*",
 	"grunt-contrib-copy": "*",
+	"grunt-contrib-csslint": "*",
+	"grunt-contrib-imagemin": "*",
+	"grunt-autoprefixer": "*",
 	"matchdep": "*",
-	"grunt-usemin": "*"
+	"grunt-usemin": "*",
+	"grunt-csso": "*"
   },
   "repository":{
 	"type": "git",

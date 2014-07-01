@@ -78,8 +78,49 @@ module.exports = function(grunt){
 						src: ["**"],
 						dest: ''
 				}]
+			},
+		},
+		cssmin: {
+			build: {
+				options: {
+					report: 'gzip'
+				}
 			}
-		}
+		},
+		csso: {
+			build: {
+				files:[{
+					expand: true,
+					cwd: '<%= dir.build %><%= dir.css %>',
+					src: '**/*.css',
+					dest: '<%= dir.build %><%= dir.css %>'
+				}]
+			}
+		},
+		autoprefixer: {
+			options: {
+				browsers:[
+					'> 1%',
+					'last 2 versions',
+					'safari 6',
+					'ie 9',
+					'opera 12.1',
+					'ios 6',
+					'android 4'
+				]
+			},
+			build: {
+				src: '<%= dir.build %><%= dir.css %>/*.css'
+			}
+		},
+		csslint: {
+			options: {
+				csslintrc: '.csslintrc'
+			},
+			report: {
+				src: ['<%= dir.src %><%= dir.css %>/**/*.css']
+			}
+		},
     });
 
 
@@ -94,7 +135,9 @@ module.exports = function(grunt){
 			'cssmin',
 			'uglify',
 			'copy',
-			'usemin'
+			'usemin',
+			'autoprefixer:build',
+			'csso:build'
 			]);
     grunt.registerTask('dryrun', [
 			'clean:build',
@@ -106,5 +149,8 @@ module.exports = function(grunt){
     grunt.registerTask('cls', [
 			'clean:build',
 			'clean:release',
+	]);
+    grunt.registerTask('cls', [
+			'cssmin:report'
 	]);
 };
